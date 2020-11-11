@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인 데이터 처리</title>
+<title>회원가입 데이터 처리</title>
 </head>
 <body>
 <%
@@ -22,6 +22,7 @@
 		out.println("history.back()");
 		out.println("</script>");
 	} else {
+		session.setAttribute("userId", user.getUserId());
 		out.println("<script>");
 		out.println("location.href='main.jsp'");
 		out.println("</script>");
